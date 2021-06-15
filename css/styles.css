@@ -161,6 +161,26 @@ img {
   color: var(--heading-text-color);
 }
 
+.nav-list-item {
+  position: relative;
+}
+
+.current-page::after {
+  position: absolute;
+  bottom: -1px;
+
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+
+  content: '';
+  background-color: var(--accent-color);
+}
+
+.header .link {
+  transition: color 250ms var(--cubic);
+}
+
 .nav-list .current-page,
 .header .link:hover,
 .header .link:focus {
