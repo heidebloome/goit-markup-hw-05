@@ -237,6 +237,10 @@ img {
   margin-bottom: 9px;
 }
 
+.address-box .link {
+  transition: color 250ms var(--cubic);
+}
+
 .address-box .link:hover,
 .address-box .link:focus {
   color: var(--accent-color);
@@ -270,6 +274,8 @@ img {
 
   background-color: var(--white-color-opacity10);
   color: var(--white-color);
+
+  transition: background-color 250ms var(--cubic);
 }
 
 .social-icons-link:hover,
