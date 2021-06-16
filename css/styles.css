@@ -653,9 +653,8 @@ img {
   width: 100%;
   height: 100%;
   padding: 63px 24px;
-
+  visibility: hidden;
   background-color: var(--accent-color-opacity90);
-
   transition: transform var(--time) var(--cubic);
 }
 
@@ -670,6 +669,7 @@ img {
 .portfolio-list-link:hover .portfolio-overlay,
 .portfolio-list-link:focus .portfolio-overlay {
   transform: translateY(0);
+  visibility: visible;
 }
 
 .portfolio-list-link:hover,
