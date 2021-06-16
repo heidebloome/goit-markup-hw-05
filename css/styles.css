@@ -712,16 +712,19 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100vw;
   height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.2);
 
+  visibility: visible;
   opacity: 1;
-  transition: opacity var(--time) var(--cubic);
+  transition: opacity var(--time) var(--cubic), visibility var(--time) var(--cubic);
 }
 
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -730,8 +733,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
+
   width: 528px;
   height: 581px;
 
@@ -742,7 +745,7 @@ img {
   background-color: var(--white-color);
 }
 
-.button-close {
+.modal-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -761,6 +764,6 @@ img {
   cursor: pointer;
 }
 
-.button-close .icon {
+.modal-close .icon {
   fill: var(--black-color);
 }
