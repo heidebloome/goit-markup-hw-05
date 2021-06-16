@@ -9,12 +9,14 @@
   --white-color-opacity60: rgba(255, 255, 255, 0.6);
   --white-color-opacity10: rgba(255, 255, 255, 0.1);
   --background-dark-color: #2f303a;
-  --background-grey-color: #f5f4fa;
+  --background-light-color: #f5f4fa;
   --background-hero-color: #c4c4c4;
   --background-gradient-color: rgba(47, 48, 58, 0.4);
-  --background-color-opacity80: rgba(47, 48, 58, 0.8);
+  --background-our-works-overlay: rgba(47, 48, 58, 0.8);
+  --backdrop-color: rgba(0, 0, 0, 0.2);
   --border-header-color: #ececec;
   --icon-color: #afb1b8;
+  --modal-icon-border-color: rgba(0, 0, 0, 0.1);
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --time: 250ms;
 }
@@ -79,10 +81,10 @@ img {
   justify-content: center;
   align-items: center;
 
-  border: 0;
-  border-radius: 50%;
   width: 100%;
   height: 100%;
+  border: 0;
+  border-radius: 50%;
 
   transition: background-color var(--time) var(--cubic), color var(--time) var(--cubic);
 }
@@ -413,7 +415,7 @@ img {
   height: 120px;
   margin-bottom: 30px;
 
-  background-color: var(--background-grey-color);
+  background-color: var(--background-light-color);
 }
 
 /* секция "чем мы занимаемся" */
@@ -447,7 +449,7 @@ img {
   padding-top: 27px;
   padding-bottom: 27px;
 
-  background-color: var(--background-color-opacity80);
+  background-color: var(--background-our-works-overlay);
 }
 
 .our-works-overlay-text {
@@ -464,7 +466,7 @@ img {
 /* секция "наша команда" */
 
 .our-team {
-  background-color: var(--background-grey-color);
+  background-color: var(--background-light-color);
 }
 
 .our-team-list {
@@ -473,7 +475,6 @@ img {
 
 .our-team-list-item {
   flex-basis: calc((100% - 90px) / 4);
-
   border: 0;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -487,11 +488,10 @@ img {
 }
 
 .our-team-list-content {
-  padding: 30px 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 0;
 }
 
 .our-team-list-content .subtitle,
@@ -577,7 +577,6 @@ img {
 .portfolio-buttons-list {
   display: flex;
   justify-content: center;
-
   margin-bottom: 50px;
 }
 
@@ -586,8 +585,6 @@ img {
 }
 
 .portfolio-buttons-list .button {
-  border: 0;
-  border-radius: 4px;
   padding: 6px 22px;
 
   font-family: inherit;
@@ -598,8 +595,11 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
+  border: 0;
+  border-radius: 4px;
+
   color: var(--heading-text-color);
-  background-color: var(--background-grey-color);
+  background-color: var(--background-light-color);
 
   cursor: pointer;
 
@@ -620,7 +620,6 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-
   margin-right: -30px;
   margin-bottom: -30px;
 }
@@ -716,7 +715,7 @@ img {
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--backdrop-color);
 
   visibility: visible;
   opacity: 1;
@@ -738,9 +737,9 @@ img {
   width: 528px;
   height: 581px;
 
+  border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
 
   background-color: var(--white-color);
 }
@@ -753,12 +752,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 30px;
   height: 30px;
 
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--modal-icon-border-color);
   background-color: var(--white-color);
 
   cursor: pointer;
